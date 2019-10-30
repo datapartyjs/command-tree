@@ -1,0 +1,27 @@
+{
+  "name": "command-tree",
+  "private": false,
+  "version": "1.0.0",
+  "description": "bossy command tree",
+  "author": "RosHub Inc. <code@roshub.io>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datapartyjs/command-tree.git"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "bossy": "^4.0.3",
+    "debug": "^4.1.1",
+    "deep-set": "^1.0.1",
+    "hoek": "^6.1.3",
+    "traverse": "^0.6.6"
+  }
+}
