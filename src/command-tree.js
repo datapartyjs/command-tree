@@ -1,4 +1,4 @@
-const Hoek = require('hoek')
+const Hoek = require('@hapi/hoek')
 const Bossy = require('@hapi/bossy')
 const Traverse = require('traverse')
 const deepSet = require('deep-set')
