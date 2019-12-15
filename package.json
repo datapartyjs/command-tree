@@ -1,7 +1,7 @@
 {
   "name": "command-tree",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "bossy command tree",
   "author": "RosHub Inc. <code@roshub.io>",
   "license": "Apache-2.0",
