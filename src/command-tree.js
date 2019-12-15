@@ -7,7 +7,12 @@ const debug = require('debug')('command-tree')
 
 const Error = require('./error')
 const Command = require('./command')
+const HelpCommand = require('./cmd-help')
 
+
+/**
+ * @class
+ */
 class CommandTree {
   constructor({context, usage, definition} = {} ){
     this.cmds = {}
