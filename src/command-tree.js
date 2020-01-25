@@ -5,7 +5,7 @@ const deepSet = require('deep-set')
 
 const debug = require('debug')('command-tree')
 
-const Error = require('./error')
+const DpcError = require('./error')
 const Command = require('./command')
 
 
@@ -158,7 +158,7 @@ class CommandTree {
       depth++
     }
   
-    if(!selectedNode){ throw new Error.UnknownCommandError(args.join(' ')) }
+    if(!selectedNode){ throw new DpcError.UnknownCommandError(args.join(' ')) }
 
 
     const command = new selectedNode(context || this.context)
@@ -195,7 +195,7 @@ class CommandTree {
         opts.parsed = await command.parse(opts)
 
         if(opts.parsed instanceof Error){
-          throw new Error.UsageError(opts.path.replace('.', ' '))
+          throw new DpcError.UsageError(opts.path.replace('.', ' '))
         }
 
         opts.output = await command.run(opts)
@@ -204,8 +204,8 @@ class CommandTree {
       catch(err){
         debug('error', err)
         if(
-          err instanceof Error.UsageError ||
-          err instanceof Error.HelpRequest
+          err instanceof DpcError.UsageError ||
+          err instanceof DpcError.HelpRequest
         ){
           return this.getCmdHelp(opts.path, err)
         }
