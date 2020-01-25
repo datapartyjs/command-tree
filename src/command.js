@@ -1,4 +1,4 @@
-
+const Bossy = require('@hapi/bossy')
 const debug = require('debug')('command-tree.command')
 
 /**
